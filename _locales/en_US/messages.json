@@ -1,0 +1,13 @@
+{
+   "extDesc": {
+      "description": "",
+      "message": "extract, edit, and evaluate xPath In DevTools."
+   },
+   "extName": {
+      "description": "",
+      "message": "xPath Finder"
+   },
+   "noPanel": {
+      "message": "Please open Developer Tools first(Press F12)."
+   }
+}

@@ -1,0 +1,13 @@
+{
+   "extDesc": {
+      "description": "",
+      "message": "Page object Mode selector ."
+   },
+   "extName": {
+      "description": "",
+      "message": "POM Magic"
+   },
+   "noPanel": {
+      "message": "Please open Developer Tools first(Press F12)."
+   }
+}

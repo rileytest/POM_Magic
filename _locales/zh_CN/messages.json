@@ -1,0 +1,13 @@
+{
+    "extDesc": {
+      "description": "",
+      "message": "Page object Mode selector ."
+   },
+   "extName": {
+      "description": "",
+      "message": "POM Magic"
+   },
+   "noPanel": {
+      "message": "请先打开开发者工具(按F12)"
+   }
+}

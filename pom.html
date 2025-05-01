@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<title>PomMagic</title>
+        <meta charset="GB2312"/>
+<!--         <style type="text/css">
+            table tr:hover{background-color:aquamarine;}
+        </style> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="css/jquery.dialog.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="scripts/jquery-2.1.0.js"></script>
+		<script src="scripts/jquery.dialog.js"></script>
+        <script src="scripts/bootstrap-filestyle.min.js"></script>
+        <script src="scripts/utils.js"></script>
+        <script src="scripts/getpomlib.js"></script>
+        <script src="scripts/js-yaml.min.js"></script>
+        <script src="scripts/pom.js"></script>
+	</head>
+	<body>
+		<p>
+            <div class="div-toolbar">
+                <input type="button" id="sum" value="Capture" class="btn btn-primary btn-sm" />
+            </div>
+            <div class="div-toolbar">
+                <input type="button" id="add" value="Add" class="btn btn-info btn-sm" style="margin-left: 20px;"/>
+                <input type="button" id="delete" value="Delete" class="btn btn-info btn-sm" style="margin-left: 8px;"/>
+            </div>
+            <div class="div-toolbar">
+                <label>Priority</label>
+                <span id="priorConfig"></span>
+            </div>
+            <div class="div-toolbar">
+                &nbsp;&nbsp;&nbsp;
+                <a id="xmlLink" style="color: blue; text-decoration-line: underline;"></a>
+            </div>
+        
+            <div class="div-toolbar">
+                
+            </div>
+            <div class="div-toolbar">
+                <div class="input-group">
+                    <input id="pageName" type="text" placeholder="Enter page name" style="margin-left: 50px;"/>
+                    <input type="button" id="exprotYaml" value="Export" class="btn btn-success btn-sm" />
+                </div>
+            </div>
+        
+            <div class="div-toolbar">
+                <input type="file" id="openfile" class="filestyle" data-size="sm" data-placeholder="Import yaml file" data-text="Import" data-btnClass="btn-success"/>
+            </div>
+        
+		</p>
+		<div id="r" style="clear:both;">
+		</div>
+		
+        <br/>
+		<div id="Display-list" style="margin-right: 4px;">
+			<i> Tips: Click capture button to get page elements.</i>
+		</div>
+
+	</body>
+
+</html>
