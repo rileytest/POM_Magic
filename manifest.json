@@ -7,38 +7,35 @@
  */
 
 {
-  "manifest_version": 3,
-  "name": "Element Locator Pro",
-  "version": "3.0",
-  "description": "Advanced element locator with priority selection",
-  "permissions": [
-    "storage",
-    "scripting",
-    "activeTab"
-  ],
-  "host_permissions": ["<all_urls>"],
-  "background": {
-    "service_worker": "sw.js",
-    "type": "module"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
+	"manifest_version": 2,
+
+	"name": "POM Magic",
+	"description": "Page object Mode selector .",
+	"version": "0.2.25",
+	"permissions": ["tabs", "contextMenus", "activeTab", "<all_urls>", "storage"],
+    "devtools_page": "devtools.html",
+    "options_page": "option.html",
+    "default_locale": "zh_CN",
+    "icons": {
+        "32": "images/camera.png"
+    },
+	"background": {
+		"page": "background.html"
+	},
+	"content_scripts": [{
+        //"all_frames": true,
+		"matches": ["<all_urls>"],
+        "css": ["css/style.css"],
+        "js": ["scripts/jquery-2.1.0.js", "scripts/jquery.xpath.js", "scripts/fsSelection.js", "scripts/js-yaml.min.js", "scripts/utils.js", "scripts/getpomlib.js", "scripts/contentscript.js", "scripts/getElements.js", "scripts/cross-origin.js", "scripts/option.js"]
+	}],
+	"plugins": [{
+		"path": "plugin/npfireshot.dll",
+		"public": false
+	}],
+    "browser_action": {
+        "default_title": "POM Magic",
+        "default_icon": "images/camera.png",
+        "default_popup": "author.html"
     }
-  },
-  "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["content.js"],
-    "run_at": "document_idle"
-  }],
-  "web_accessible_resources": [{
-    "resources": ["iframe-probe.js"],
-    "matches": ["<all_urls>"]
-  }],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
-  }
+	
 }
